@@ -15,4 +15,12 @@
         <item name="colorAccent">#FEFEFE</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="NoActionBarTwo" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#33E0A1</item>
+        <item name="colorPrimaryDark">#33E0A1</item>
+        <item name="colorAccent">#33E0A1</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>
