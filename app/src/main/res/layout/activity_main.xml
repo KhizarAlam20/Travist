@@ -18,7 +18,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -64,10 +65,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hello!"
+                    android:text="Hi, Travist"
                     android:textSize="50sp"
                     android:fontFamily="@font/futura_heavy"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="31dp"
                     android:layout_marginRight="30dp"
                     android:textColor="@color/black">
                 </TextView>
@@ -85,18 +86,27 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_marginRight="10dp">
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content">
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/field_background"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="Hotels">
                         </com.google.android.material.button.MaterialButton>
 
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content">
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:text="Flights"
+                            android:background="@drawable/field_background"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:layout_marginTop="10dp">
                         </com.google.android.material.button.MaterialButton>
+
 
                     </LinearLayout>
 
@@ -106,13 +116,21 @@
                         android:orientation="vertical">
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content">
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:background="@drawable/field_background"
+                            android:text="Reservations">
+
                         </com.google.android.material.button.MaterialButton>
 
                         <com.google.android.material.button.MaterialButton
-                            android:layout_width="180dp"
-                            android:layout_height="wrap_content">
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/field_background"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:layout_marginTop="10dp"
+                            android:text="Trips">
                         </com.google.android.material.button.MaterialButton>
 
                     </LinearLayout>
@@ -122,6 +140,111 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:text="Flights"
+                    android:background="@drawable/field_background"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginTop="10dp">
+                </com.google.android.material.button.MaterialButton>
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
