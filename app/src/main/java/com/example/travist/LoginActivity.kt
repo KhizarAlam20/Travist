@@ -28,16 +28,11 @@ class LoginActivity : AppCompatActivity() {
             println(Name + "t" + Password)
 
             if(Name.equals("khizar") && Password.equals("alam")) {
-                var intent = Intent(this, SignupActivity::class.java)
+                var intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }else{
-                if(!Name.equals("khizar")){
-                    Toast.makeText(this,"name error",Toast.LENGTH_SHORT).show()
-                }else if(!Password.equals("alam")){
-                    Toast.makeText(this,"Pass error",Toast.LENGTH_SHORT).show()
-                }else{
-                    Toast.makeText(this,"cant identify",Toast.LENGTH_SHORT).show()
-                }
+                    var intent = Intent(this, SignupActivity::class.java)
+                    startActivity(intent)
             }
         }
     }

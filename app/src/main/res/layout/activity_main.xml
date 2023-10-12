@@ -5,14 +5,140 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="670dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/sc_main"
+        android:layout_height="match_parent">
 
-        app:srcCompat="@drawable/travista"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="367dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:backgroundTint="@color/teal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                layout for cart-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+
+                >
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/man"
+                    android:layout_marginRight="20dp"
+                    ></ImageView>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/shoppin_cart"
+                    >
+                </ImageView>
+
+            </LinearLayout>
+
+<!--                layout for text view-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hello!"
+                    android:textSize="50sp"
+                    android:fontFamily="@font/futura_heavy"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="@color/black">
+                </TextView>
+
+            </LinearLayout>
+
+<!--                button views layout-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="30dp">
+
+<!--                    horizontal-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.button.MaterialButton>
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.button.MaterialButton>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.button.MaterialButton>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content">
+                        </com.google.android.material.button.MaterialButton>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+<!--    Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:backgroundTint="@color/black"></androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
 </LinearLayout>
