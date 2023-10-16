@@ -49,8 +49,8 @@
                     ></ImageView>
 
                 <ImageView
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/shoppin_cart"
                     >
                 </ImageView>
@@ -65,8 +65,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Hi, Travist"
-                    android:textSize="50sp"
+                    android:text="Explore"
+                    android:textSize="27sp"
                     android:fontFamily="@font/futura_heavy"
                     android:layout_marginLeft="31dp"
                     android:layout_marginRight="30dp"
