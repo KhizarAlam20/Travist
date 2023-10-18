@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#fff"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:gravity="center"
 
     android:orientation="vertical"
@@ -22,187 +22,347 @@
             android:layout_height="match_parent"
             android:fadeScrollbars="true">
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:backgroundTint="@color/teal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <!--                layout for cart-->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginRight="47dp"
-                            android:gravity="right"
-                            android:orientation="horizontal"
-
-                            >
-
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:layout_marginRight="10dp"
-                                android:src="@drawable/man"
-
-                                ></ImageView>
-
-                            <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
-                                android:paddingTop="5dp"
-                                android:src="@drawable/shoppin_cart"></ImageView>
-
-                        </LinearLayout>
-
-                        <!--                layout for text view-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginRight="20dp">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="30dp"
-                                android:fontFamily="@font/futura_heavy"
-                                android:text="Explore"
-
-                                android:textColor="@color/black"
-                                android:textSize="27sp"></TextView>
-
-                        </LinearLayout>
-
-                        <!--                button views layout-->
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="20dp"
-
-                            android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
-
-                            <!--                    horizontal-->
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginRight="10dp"
-                                android:orientation="vertical">
-
-                                <Button
-                                    android:layout_width="170dp"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/image"
-                                    android:fontFamily="@font/futura_heavy"
-                                    android:text="Hotels"></Button>
-
-
-                                <Button
-                                    android:layout_width="170dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/image"
-                                    android:fontFamily="@font/futura_heavy"
-                                    android:text="Flights"></Button>
-
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <Button
-                                    android:layout_width="170dp"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/image"
-                                    android:fontFamily="@font/futura_heavy"
-                                    android:text="Reservations">
-
-                                </Button>
-
-                                <Button
-                                    android:layout_width="170dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="10dp"
-                                    android:background="@drawable/image"
-                                    android:fontFamily="@font/futura_heavy"
-                                    android:text="Trips"></Button>
-
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+                android:layout_height="245dp"
+                android:backgroundTint="#45EEB0">
 
                 <LinearLayout
-                    android:layout_width="345dp"
-                    android:layout_height="200dp"
-                    android:layout_margin="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:cardCornerRadius="15dp"
-                        android:backgroundTint="#000">
+                <!--                layout for cart-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:src="@drawable/place_five">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="47dp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
 
+                    >
 
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/man"
 
-                        </ImageView>
+                        ></ImageView>
 
-
-
-                    </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:paddingTop="5dp"
+                        android:src="@drawable/shoppin_cart"></ImageView>
 
                 </LinearLayout>
 
+                <!--                layout for text view-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:fontFamily="@font/futura_heavy"
+                        android:text="Explore"
+                        android:textColor="@color/black"
+                        android:textSize="32sp"></TextView>
+
+                </LinearLayout>
+
+                <!--                button views layout-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                <!--                    horizontal-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/hotel_btn"
+                    app:cardCornerRadius="100dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/hotel">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hotel"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/futura_heavy">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
 
-            </LinearLayout>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="170dp"
+                        android:layout_height="50dp"
+                        android:id="@+id/flight_btn"
+                        android:layout_marginTop="10dp"
+                        app:cardCornerRadius="100dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="12dp"
+                                android:src="@drawable/airplane">
+                            </ImageView>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Flight"
+                                android:textSize="17dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="12dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/futura_heavy">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:id="@+id/reservation_btn"
+                app:cardCornerRadius="100dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/booked">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reservation"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/futura_heavy">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/resturant_btn"
+                app:cardCornerRadius="100dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/restaurant">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resturant"
+                        android:textSize="17dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/futura_heavy">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<LinearLayout
+android:layout_height="200dp"
+android:layout_margin="30dp"
+android:layout_width="345dp"
+android:orientation="vertical">
+
+<androidx.cardview.widget.CardView
+    android:backgroundTint="#000"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    app:cardCornerRadius="1dp">
+
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/hotairballonst"
+        android:scaleType="centerCrop">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="35dp"
+        android:text="Discover more in various Cities!"
+        android:fontFamily="@font/futura_heavy"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        ></TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:id="@+id/explore_btn"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="100dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/compass">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discover"
+                android:textSize="17dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/futura_heavy">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>
+    </LinearLayout>
         </ScrollView>
+
     </LinearLayout>
 
     <!--    Menu-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+<LinearLayout
+android:layout_height="wrap_content"
+android:layout_width="match_parent"
+android:orientation="vertical">
 
-        <com.ismaeldivita.chipnavigation.ChipNavigationBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:background="#fff"
-            android:gravity="center"
-            app:cnb_menuResource="@menu/bottom_menu"
+<com.ismaeldivita.chipnavigation.ChipNavigationBar
+    android:background="#fff"
+    android:gravity="center"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_width="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    app:cnb_menuResource="@menu/bottom_menu"
 
-            ></com.ismaeldivita.chipnavigation.ChipNavigationBar>
-
-
-    </LinearLayout>
+    ></com.ismaeldivita.chipnavigation.ChipNavigationBar>
 
 
 </LinearLayout>
+
+
+    </LinearLayout>
