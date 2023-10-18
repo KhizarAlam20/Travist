@@ -30,7 +30,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="245dp"
-                android:backgroundTint="#45EEB0">
+                android:backgroundTint="#0BAF73">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginRight="47dp"
                     android:gravity="right"
@@ -70,7 +70,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginRight="20dp">
 
                     <TextView
@@ -88,7 +88,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
 
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal">
@@ -113,8 +113,8 @@
                     android:orientation="horizontal"
                     >
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="12dp"
                         android:src="@drawable/hotel">
@@ -124,11 +124,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Hotel"
-                        android:textSize="17dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="12dp"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="13dp"
+                        android:layout_marginTop="14dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_heavy">
+                        android:fontFamily="@font/futura_medium_bt"
+                        >
 
                     </TextView>
 
@@ -151,8 +152,8 @@
                             android:orientation="horizontal"
                             >
                             <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
                                 android:layout_marginLeft="20dp"
                                 android:layout_marginTop="12dp"
                                 android:src="@drawable/airplane">
@@ -162,11 +163,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Flight"
-                                android:textSize="17dp"
+                                android:textSize="15dp"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="12dp"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/futura_heavy">
+                                android:fontFamily="@font/futura_medium_bt">
 
                             </TextView>
 
@@ -194,8 +195,8 @@
                     android:orientation="horizontal"
                     >
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="12dp"
                         android:src="@drawable/booked">
@@ -205,11 +206,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Reservation"
-                        android:textSize="17dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="12dp"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="13dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_heavy">
+                        android:fontFamily="@font/futura_medium_bt">
 
                     </TextView>
 
@@ -232,8 +233,8 @@
                     android:orientation="horizontal"
                     >
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginTop="12dp"
                         android:src="@drawable/restaurant">
@@ -243,11 +244,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Resturant"
-                        android:textSize="17dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="12dp"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="13dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_heavy">
+                        android:fontFamily="@font/futura_medium_bt">
 
                     </TextView>
 
@@ -265,16 +266,16 @@
     </androidx.cardview.widget.CardView>
 
 <LinearLayout
-android:layout_height="200dp"
+android:layout_height="170dp"
 android:layout_margin="30dp"
 android:layout_width="345dp"
+
 android:orientation="vertical">
 
 <androidx.cardview.widget.CardView
     android:backgroundTint="#000"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_gravity="center"
     app:cardCornerRadius="1dp">
 
     <ImageView
@@ -288,51 +289,26 @@ android:orientation="vertical">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="25dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:text="Discover more in various Cities!"
         android:fontFamily="@font/futura_heavy"
         android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="30dp"
+        android:textSize="23dp"
         ></TextView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:id="@+id/explore_btn"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        app:cardCornerRadius="100dp">
+   <Button
+       android:layout_width="150dp"
+       android:layout_height="50dp"
+       android:text="Keep Exploring"
+       android:textAllCaps="false"
+       android:textSize="15dp"
+       android:background="@drawable/image"
+       android:fontFamily="@font/futura_medium_bt"
+       android:layout_gravity="center_horizontal"
+       android:layout_marginTop="100dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            >
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
-                android:src="@drawable/compass">
-            </ImageView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Discover"
-                android:textSize="17dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/futura_heavy">
-
-            </TextView>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+   </Button>
 
 
 
