@@ -17,7 +17,7 @@
 
         <ScrollView
             android:id="@+id/sc_main"
-
+            android:scrollbars="none"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fadeScrollbars="true">
@@ -29,8 +29,8 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="245dp"
-                android:backgroundTint="#0BAF73">
+                android:layout_height="260dp"
+                android:backgroundTint="#33DFA1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -51,16 +51,16 @@
                     >
 
                     <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/man"
 
                         ></ImageView>
 
                     <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:paddingTop="5dp"
                         android:src="@drawable/shoppin_cart"></ImageView>
 
@@ -77,10 +77,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="30dp"
-                        android:fontFamily="@font/futura_heavy"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/frb"
                         android:text="Explore"
                         android:textColor="@color/black"
-                        android:textSize="32sp"></TextView>
+                        android:textSize="29sp"></TextView>
 
                 </LinearLayout>
 
@@ -266,10 +267,9 @@
     </androidx.cardview.widget.CardView>
 
 <LinearLayout
-android:layout_height="170dp"
+android:layout_height="150dp"
 android:layout_margin="30dp"
 android:layout_width="345dp"
-
 android:orientation="vertical">
 
 <androidx.cardview.widget.CardView
@@ -291,22 +291,22 @@ android:orientation="vertical">
         android:layout_marginHorizontal="25dp"
         android:layout_marginTop="25dp"
         android:text="Discover more in various Cities!"
-        android:fontFamily="@font/futura_heavy"
+        android:fontFamily="@font/frb"
         android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="23dp"
+        android:textSize="19dp"
         ></TextView>
 
    <Button
-       android:layout_width="150dp"
-       android:layout_height="50dp"
+       android:layout_width="130dp"
+       android:layout_height="40dp"
        android:text="Keep Exploring"
        android:textAllCaps="false"
-       android:textSize="15dp"
+       android:textSize="13dp"
        android:background="@drawable/image"
        android:fontFamily="@font/futura_medium_bt"
        android:layout_gravity="center_horizontal"
-       android:layout_marginTop="100dp">
+       android:layout_marginTop="88dp">
 
    </Button>
 
@@ -314,7 +314,207 @@ android:orientation="vertical">
 
 </androidx.cardview.widget.CardView>
 </LinearLayout>
-    </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Scroll up to see special offers"
+                android:fontFamily="@font/futura_heavy"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp"
+                android:text="Check out extra perk and prices from the packs below"
+                android:fontFamily="@font/futura_light_bt"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                ></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/aumtns"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp"
+                    android:text="Celebrate your Autumn these autumn collections"
+                    android:fontFamily="@font/frb"
+                    android:textAlignment="textStart"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:text="Read more"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:background="@drawable/image"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="400dp">
+
+                </Button>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Top Spring Destinations for your planning"
+                android:fontFamily="@font/futura_heavy"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                ></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginLeft="30dp"
+                android:text="Check out extra perk and prices from the packs below"
+                android:fontFamily="@font/futura_light_bt"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                ></TextView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/trip_home"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="400dp"
+                    android:text="Check the most loved destinations"
+                    android:fontFamily="@font/frb"
+                    android:textAlignment="textStart"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:text="Read more"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:background="@drawable/image"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="500dp">
+
+                </Button>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hotel_home"
+                    android:scaleType="centerCrop"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="420dp"
+                    android:text="Book the five rated hotel of your choice "
+                    android:fontFamily="@font/frb"
+                    android:textAlignment="textStart"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <Button
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:text="Read more"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:background="@drawable/image"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="500dp">
+
+                </Button>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#004F32"
+                app:cardCornerRadius="8dp"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:text="Did we forget any places?"
+                    android:fontFamily="@font/frb"
+                    android:textAlignment="textStart"
+                    android:layout_marginHorizontal="30dp"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    ></TextView>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="Visit Travist web"
+                    android:textAllCaps="false"
+                    android:textSize="13dp"
+                    android:background="@drawable/image"
+                    android:fontFamily="@font/futura_medium_bt"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="130dp">
+
+                </Button>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
         </ScrollView>
 
     </LinearLayout>
