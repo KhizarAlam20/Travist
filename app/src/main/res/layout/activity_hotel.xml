@@ -4,27 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FEFEFE"
     android:orientation="vertical"
     tools:context=".HotelActivity">
 
-   <com.airbnb.lottie.LottieAnimationView
-       android:layout_width="250dp"
-       android:layout_height="250dp"
-       app:lottie_rawRes="@raw/hotel"
-       android:layout_gravity="center"
-       app:lottie_loop="true"
-       app:lottie_autoPlay="true"
-      >
-   </com.airbnb.lottie.LottieAnimationView>
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+         android:src="@drawable/h6"
+          android:scaleType="centerCrop">
+
+      </ImageView>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+         >
 
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-      android:text="Hotels"
-      android:textSize="50dp"
+      android:text="HOTELS"
+       android:layout_marginTop="250dp"
+      android:textSize="65dp"
       android:fontFamily="@font/futura_heavy"
-      android:textColor="@color/teal"
+      android:textColor="#FEFEFE"
       android:gravity="center">
    </TextView>
    <androidx.recyclerview.widget.RecyclerView
@@ -35,4 +42,6 @@
        android:layout_height="match_parent"
        android:id="@+id/rcv"/>
 
+      </LinearLayout>
+   </RelativeLayout>
 </LinearLayout>

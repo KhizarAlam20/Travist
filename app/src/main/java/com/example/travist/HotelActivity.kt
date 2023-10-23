@@ -3,6 +3,7 @@ package com.example.travist
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travist.databinding.ActivityMainBinding
@@ -21,11 +22,11 @@ class HotelActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hotel)
 
         hotel_image = arrayOf(
-            R.drawable.hotairballons,
-            R.drawable.hotairballons,
-            R.drawable.hotairballons,
-            R.drawable.hotairballons,
-            R.drawable.hotairballons
+            R.drawable.h1,
+            R.drawable.h2,
+            R.drawable.h3,
+            R.drawable.h4,
+            R.drawable.h5
         )
 
         hotel_name = arrayOf(
@@ -38,10 +39,10 @@ class HotelActivity : AppCompatActivity() {
 
         hotel_price = arrayOf(
             "$200",
-            "$20",
+            "$900",
             "$260",
-            "$30",
-            "$280",
+            "$350",
+            "$880",
         )
 
         hotel_description = arrayOf(
@@ -74,7 +75,15 @@ class HotelActivity : AppCompatActivity() {
             val news = hotelDetailClass(hotel_name[i],hotel_description[i],hotel_price[i],hotel_image[i])
             newArrayList.add(news)
         }
-        rcv.adapter = rcvAdapter(this,newArrayList)
+        var adapter = rcvAdapter(newArrayList)
+
+        rcv.adapter = rcvAdapter(newArrayList)
+
+        adapter.setOnItemClickListner(object: rcvAdapter.onItemClickListner{
+            override fun onItemClick(position: Int) {
+                Toast.makeText(this@HotelActivity,"Maliiiiik",Toast.LENGTH_SHORT).show()
+            }
+        })
 
     }
 }

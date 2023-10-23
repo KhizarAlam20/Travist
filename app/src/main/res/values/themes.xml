@@ -23,4 +23,12 @@
         <item name="colorAccent">#0BAF73</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="NoActionBarThree" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#050505</item>
+        <item name="colorPrimaryDark">#050505</item>
+        <item name="colorAccent">#050505</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>

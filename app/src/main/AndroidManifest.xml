@@ -15,7 +15,7 @@
         <activity
             android:name=".HotelActivity"
             android:exported="false"
-            android:theme="@style/NoActionBarTwo"/>
+            android:theme="@style/NoActionBarThree"/>
 
 
         <activity
