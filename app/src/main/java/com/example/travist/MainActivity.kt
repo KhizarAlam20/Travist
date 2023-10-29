@@ -7,7 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.blogspot.atifsoftwares.animatoolib.Animatoo
-import com.example.travist.databinding.ActivityMainBinding
+import com.example.travist.hotel.HotelActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,17 +38,23 @@ class MainActivity : AppCompatActivity() {
 
         hotel_btn.setOnClickListener {
             Toast.makeText(this,"Hotel",Toast.LENGTH_SHORT).show()
-            val intent = Intent(this,HotelActivity::class.java)
+            val intent = Intent(this, HotelActivity::class.java)
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
         }
 
         flight_btn.setOnClickListener {
             Toast.makeText(this,"Flight",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, FilghtActivity::class.java)
+            startActivity(intent)
+            Animatoo.animateSlideLeft(this)
         }
 
         resturant_btn.setOnClickListener {
             Toast.makeText(this,"Resturant",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ResturantActivity::class.java)
+            startActivity(intent)
+            Animatoo.animateSlideLeft(this)
         }
 
         reservation_btn.setOnClickListener {

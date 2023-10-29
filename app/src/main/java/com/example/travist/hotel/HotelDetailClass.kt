@@ -1,6 +1,4 @@
-package com.example.travist
-
-import android.media.Image
+package com.example.travist.hotel
 
 data class hotelDetailClass (
     var hotelName :String ="",
@@ -8,4 +6,3 @@ data class hotelDetailClass (
     var price:String="",
     var hotelImage: Int
 )
-

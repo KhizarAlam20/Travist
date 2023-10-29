@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".HotelActivity">
+    tools:context=".hotel.HotelActivity">
 
    <RelativeLayout
        android:layout_width="match_parent"
@@ -29,7 +29,7 @@
        android:layout_height="wrap_content"
       android:text="HOTELS"
        android:layout_marginTop="250dp"
-      android:textSize="65dp"
+      android:textSize="55dp"
       android:fontFamily="@font/futura_heavy"
       android:textColor="#FEFEFE"
       android:gravity="center">

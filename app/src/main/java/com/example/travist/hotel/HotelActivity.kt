@@ -1,14 +1,13 @@
-package com.example.travist
+package com.example.travist.hotel
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.travist.databinding.ActivityMainBinding
+import com.example.travist.R
 
-class HotelActivity : AppCompatActivity() {
+class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
     lateinit var rcv : RecyclerView
     lateinit var hotel_name :Array<String>
     lateinit var newArrayList : ArrayList<hotelDetailClass>
@@ -75,15 +74,15 @@ class HotelActivity : AppCompatActivity() {
             val news = hotelDetailClass(hotel_name[i],hotel_description[i],hotel_price[i],hotel_image[i])
             newArrayList.add(news)
         }
-        var adapter = rcvAdapter(newArrayList)
+        rcv.adapter = rcvAdapter(this, newArrayList,this)
 
-        rcv.adapter = rcvAdapter(newArrayList)
+//    var adapter = hotelDetailClass(newArrayList)
+    }
 
-        adapter.setOnItemClickListner(object: rcvAdapter.onItemClickListner{
-            override fun onItemClick(position: Int) {
-                Toast.makeText(this@HotelActivity,"Maliiiiik",Toast.LENGTH_SHORT).show()
-            }
-        })
+    override fun onItemClick(position: Int) {
+        Toast.makeText(this,"hello $position",Toast.LENGTH_SHORT).show()
+        val clickItem = newArrayList[position]
+
 
     }
 }

@@ -13,11 +13,18 @@
         android:theme="@style/Theme.Travist"
         tools:targetApi="31">
         <activity
-            android:name=".HotelActivity"
+            android:name=".ResturantActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBarThree"/>
+        <activity
+            android:name=".FilghtActivity"
             android:exported="false"
             android:theme="@style/NoActionBarThree"/>
 
-
+        <activity
+            android:name=".hotel.HotelActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBarThree" />
         <activity
             android:name=".SignupActivity"
             android:exported="false"
