@@ -59,6 +59,9 @@ class MainActivity : AppCompatActivity() {
 
         reservation_btn.setOnClickListener {
             Toast.makeText(this,"Reservation",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ReservationActivity::class.java)
+            startActivity(intent)
+            Animatoo.animateSlideLeft(this)
         }
     }
 
