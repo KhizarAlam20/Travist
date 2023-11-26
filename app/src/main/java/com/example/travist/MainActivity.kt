@@ -20,6 +20,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
+
+        // Retrieve user_id from the intent
+        val user_id = intent.getStringExtra("USER_ID")
+
+        // Now you can use the user_id as needed
+        // For example, you can print it to the log
+        Log.d("MainActivity", "User ID: $user_id")
+
+        
         Animatoo.animateSlideUp(this)
         
         hotel_btn = findViewById(R.id.hotel_btn)

@@ -135,6 +135,7 @@ class LoginActivity : AppCompatActivity() {
                             if(user_id.equals(uid) && Password.equals(password)){
                                 Toast.makeText(this@LoginActivity,"Hello logged in", Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this, MainActivity::class.java)
+                                intent.putExtra("USER_ID", user_id) // Add the user_id as an extra
                                 startActivity(intent)
                                 Animatoo.animateSlideLeft(this)
                             }
