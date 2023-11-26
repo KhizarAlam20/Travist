@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         // Retrieve user_id from the intent
         val user_id = intent.getStringExtra("USER_ID")
+        val username = intent.getStringExtra("USER_NAME")
 
         // Now you can use the user_id as needed
         // For example, you can print it to the log
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         resturant_btn = findViewById(R.id.resturant_btn)
         reservation_btn = findViewById(R.id.reservation_btn)
 
-        userName.text=user_id
+        userName.text=username
 
         fun onBackPressed() {
             if (doubleBackPress) {

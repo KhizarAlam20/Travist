@@ -108,7 +108,7 @@ class SignupActivity : AppCompatActivity() {
         ) {
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
-                params["name"] = nameValue
+                params["username"] = nameValue
                 params["email"] = emailValue
                 params["password"] = passwordValue
                 params["other_user_details"] = otherUserDetailsValue

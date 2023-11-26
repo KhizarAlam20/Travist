@@ -1,10 +1,12 @@
 package com.example.travist.hotel
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.travist.HotelOne
 import com.example.travist.R
 
 class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
@@ -81,8 +83,8 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position",Toast.LENGTH_SHORT).show()
+        val intent = Intent(this, HotelOne::class.java) // Add the user_id as an extra
+        startActivity(intent)
         val clickItem = newArrayList[position]
-
-
     }
 }
