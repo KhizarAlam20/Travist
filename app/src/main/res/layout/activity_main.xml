@@ -45,7 +45,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp"
                     android:layout_marginRight="47dp"
-                    android:gravity="right"
+                   android:gravity="right"
                     android:orientation="horizontal"
 
                     >
@@ -71,18 +71,29 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginRight="20dp">
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="30dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/frb"
                         android:text="Explore"
                         android:textColor="@color/black"
                         android:textSize="29sp"></TextView>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Khizar"
+                        android:id="@+id/userName"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="29sp"
+                        android:fontFamily="@font/frb"
+                        ></TextView>
                 </LinearLayout>
 
                 <!--                button views layout-->
@@ -126,11 +137,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Hotel"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="14dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_medium_bt"
+                        android:fontFamily="@font/futura_heavy"
                         >
 
                     </TextView>
@@ -167,11 +178,11 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Flight"
-                                android:textSize="15dp"
+                                android:textSize="18dp"
                                 android:layout_marginLeft="15dp"
                                 android:layout_marginTop="12dp"
                                 android:textColor="@color/black"
-                                android:fontFamily="@font/futura_medium_bt">
+                                android:fontFamily="@font/futura_heavy">
 
                             </TextView>
 
@@ -211,11 +222,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Reservation"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:layout_marginLeft="14dp"
                         android:layout_marginTop="13dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_medium_bt">
+                        android:fontFamily="@font/futura_heavy">
 
                     </TextView>
 
@@ -251,11 +262,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Resturant"
-                        android:textSize="15dp"
+                        android:textSize="18dp"
                         android:layout_marginLeft="14dp"
-                        android:layout_marginTop="13dp"
+                        android:layout_marginTop="11dp"
                         android:textColor="@color/black"
-                        android:fontFamily="@font/futura_medium_bt">
+                        android:fontFamily="@font/futura_heavy">
 
                     </TextView>
 

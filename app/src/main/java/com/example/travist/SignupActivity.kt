@@ -27,7 +27,7 @@ class SignupActivity : AppCompatActivity() {
 
 
 
-    var url: String = "https://192.168.10.6/travist/"
+//    var url: String = "https://192.168.10.4/travist/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -83,7 +83,7 @@ class SignupActivity : AppCompatActivity() {
         val emailValue: String = email.text.toString().trim()
         val passwordValue: String = password.text.toString().trim()
         val otherUserDetailsValue: String = other_user_details.text.toString().trim()
-        var URL: String = url + "conn.php"
+        var URL: String = Conn.url + "conn.php"
 
         if (passwordValue.isEmpty()) {
             Toast.makeText(this, "Enter password", Toast.LENGTH_SHORT).show()

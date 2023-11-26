@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var password: EditText
     lateinit var signup_btn : TextView
 
-    var url: String = "https://192.168.10.6/travist/"
+//    var url: String = "https://192.168.10.4/travist/"
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,7 +104,7 @@ class LoginActivity : AppCompatActivity() {
         val password: String = password.text.toString()
 
 
-        var URLL: String = url + "display.php"
+        var URLL: String = Conn.url + "display.php"
 
         val request = StringRequest(Request.Method.POST, URLL,
             Response.Listener<String> { response ->
