@@ -17,8 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".HotelOne"
+            android:name=".flight_one"
             android:exported="false" />
+        <activity
+            android:name=".HotelOne"
+            android:exported="false"
+            android:theme="@style/NoActionBarTwo" />
         <activity
             android:name=".ReservationActivity"
             android:exported="false"
