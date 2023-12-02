@@ -1,6 +1,7 @@
 package com.example.travist
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -81,6 +82,94 @@ class ResturantActivity : AppCompatActivity(), RcvResturantAdapter.OnItemClickLi
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position", Toast.LENGTH_SHORT).show()
+        var id:String=""
+        var name:String=""
+        var location:String=""
+        var cuisine:String=""
+        var price:String=""
+        if(position==0){
+
+            id="40"
+            name="A RESTAURANT"
+            location="Karachi"
+            cuisine="desert"
+            price="150"
+
+            val intent = Intent(this, ResturantOne::class.java)
+            intent.putExtra("RES_ID",id);
+            intent.putExtra("RES_NAME",name);
+            intent.putExtra("RES_LOC",location);
+            intent.putExtra("CUISINE_TYPE",cuisine);
+            intent.putExtra("RES_PRICE",price);
+            startActivity(intent)
+
+        }else if(position==1){
+            id="41"
+            name="B RESTAURANT"
+            location="Karachi"
+            cuisine="Delights"
+            price="900"
+
+
+            val intent = Intent(this, ResturantOne::class.java)
+            intent.putExtra("RES_ID",id);
+            intent.putExtra("RES_NAME",name);
+            intent.putExtra("RES_LOC",location);
+            intent.putExtra("CUISINE_TYPE",cuisine);
+            intent.putExtra("RES_PRICE",price);
+            startActivity(intent)
+
+        }else if(position==2){
+            id="42"
+            name="C RESTAURANT"
+            location="Karachi"
+            cuisine="Delights"
+            price="260"
+
+
+            val intent = Intent(this, ResturantOne::class.java)
+            intent.putExtra("RES_ID",id);
+            intent.putExtra("RES_NAME",name);
+            intent.putExtra("RES_LOC",location);
+            intent.putExtra("CUISINE_TYPE",cuisine);
+            intent.putExtra("RES_PRICE",price);
+            startActivity(intent)
+
+        }
+        else if(position==3){
+            id="43"
+            name="D RESTAURANT"
+            location="Karachi"
+            cuisine="JAMMINGS"
+            price="350"
+
+
+            val intent = Intent(this, ResturantOne::class.java)
+            intent.putExtra("RES_ID",id);
+            intent.putExtra("RES_NAME",name);
+            intent.putExtra("RES_LOC",location);
+            intent.putExtra("CUISINE_TYPE",cuisine);
+            intent.putExtra("RES_PRICE",price);
+            startActivity(intent)
+
+        }
+        else if(position==4){
+            id="44"
+            name="E RESTAURANT"
+            location="ISLAMABAD"
+            cuisine="CUISINES"
+            price="880"
+
+
+            val intent = Intent(this, ResturantOne::class.java)
+            intent.putExtra("RES_ID",id);
+            intent.putExtra("RES_NAME",name);
+            intent.putExtra("RES_LOC",location);
+            intent.putExtra("CUISINE_TYPE",cuisine);
+            intent.putExtra("RES_PRICE",price);
+            startActivity(intent)
+
+        }
         val clickItem = newArrayList[position]
     }
 }

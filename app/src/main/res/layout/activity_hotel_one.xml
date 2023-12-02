@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
             android:text="456"
-            android:id="@+id/hotel_id"
+            android:id="@+id/hotel_ID"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -61,7 +61,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:fontFamily="@font/futur"
             android:text="Hotel Name:"
             android:textColor="@color/black"
@@ -72,7 +71,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
             android:text="hotel name"
-            android:id="@+id/hotel_name"
+            android:id="@+id/hotel_Name"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -102,7 +101,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
             android:text="Location"
-            android:id="@+id/hotel_location"
+            android:id="@+id/hotel_Location"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -133,7 +132,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
             android:text="4 Star"
-            android:id="@+id/hotel_rating"
+            android:id="@+id/hotel_Rating"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -164,8 +163,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
-            android:text="$456"
-            android:id="@+id/hotel_price"
+            android:text="456"
+            android:id="@+id/hotel_Price"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -189,7 +188,7 @@
             android:fontFamily="@font/futur"
             android:text="-"
             android:backgroundTint="@color/teal"
-            android:id="@+id/decrease"
+            android:id="@+id/Decrease"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_marginTop="20dp"></Button>
@@ -212,7 +211,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:fontFamily="@font/futur"
-            android:id="@+id/increase"
+            android:id="@+id/Increase"
             android:text="+"
             android:backgroundTint="@color/teal"
             android:textColor="@color/black"
@@ -230,11 +229,22 @@
         android:id="@+id/save"
         android:layout_gravity="center"
         android:backgroundTint="@color/teal"
-        android:text="Save and Continue"
+        android:text="Save"
         android:textColor="@color/black"
         android:textSize="17dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"></Button>
-
+        android:layout_marginTop="30dp"></Button>
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/futura_book_font"
+        android:id="@+id/back"
+        android:layout_gravity="center"
+        android:backgroundTint="#15B87D"
+        android:text="Back"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"></Button>
 
 </LinearLayout>

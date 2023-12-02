@@ -83,8 +83,89 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position",Toast.LENGTH_SHORT).show()
-        val intent = Intent(this, HotelOne::class.java) // Add the user_id as an extra
-        startActivity(intent)
+
+        var id:String=""
+        var name:String=""
+        var location:String=""
+        var rating:String=""
+        var price:String=""
+        if(position==0){
+
+            id="20"
+            name="A hotel"
+            location="Karachi"
+            rating="5"
+            price="200"
+
+            val intent = Intent(this, HotelOne::class.java)
+            intent.putExtra("hotel_id",id);
+            intent.putExtra("hotel_name",name);
+            intent.putExtra("hotel_location",location);
+            intent.putExtra("hotel_rating",rating);
+            intent.putExtra("hotel_price",price);
+            startActivity(intent)
+
+        }else if(position==1){
+            id="21"
+            name="B Hotel"
+            location="Islamabad"
+            rating="4"
+            price="900"
+
+            val intent = Intent(this, HotelOne::class.java)
+            intent.putExtra("hotel_id",id);
+            intent.putExtra("hotel_name",name);
+            intent.putExtra("hotel_location",location);
+            intent.putExtra("hotel_rating",rating);
+            intent.putExtra("hotel_price",price);
+            startActivity(intent)
+
+        }else if(position==2){
+            id="22"
+            name="C hotel"
+            location="Karachi"
+            rating="4"
+            price="260"
+
+            val intent = Intent(this, HotelOne::class.java)
+            intent.putExtra("hotel_id",id);
+            intent.putExtra("hotel_name",name);
+            intent.putExtra("hotel_location",location);
+            intent.putExtra("hotel_rating",rating);
+            intent.putExtra("hotel_price",price);
+            startActivity(intent)
+
+        }else if(position==3){
+            id="23"
+            name="D hotel"
+            location="Lahore"
+            rating="5"
+            price="350"
+
+            val intent = Intent(this, HotelOne::class.java)
+            intent.putExtra("hotel_id",id);
+            intent.putExtra("hotel_name",name);
+            intent.putExtra("hotel_location",location);
+            intent.putExtra("hotel_rating",rating);
+            intent.putExtra("hotel_price",price);
+            startActivity(intent)
+        }else{
+            id="24"
+            name="E hotel"
+            location="Karachi"
+            rating="5"
+            price="880"
+
+            val intent = Intent(this, HotelOne::class.java)
+            intent.putExtra("hotel_id",id);
+            intent.putExtra("hotel_name",name);
+            intent.putExtra("hotel_location",location);
+            intent.putExtra("hotel_rating",rating);
+            intent.putExtra("hotel_price",price);
+            startActivity(intent)
+        }
+
+
         val clickItem = newArrayList[position]
     }
 }

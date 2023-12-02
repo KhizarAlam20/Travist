@@ -1,6 +1,7 @@
 package com.example.travist
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -83,6 +84,116 @@ class FilghtActivity : AppCompatActivity(), RcvFlightAdapter.OnItemClickListner 
 
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position", Toast.LENGTH_SHORT).show()
+        var id:String=""
+        var name:String=""
+        var Dlocation:String=""
+        var Alocation:String=""
+        var Dtime:String=""
+        var Atime:String=""
+        var price:String=""
+
+        if(position==0){
+
+            id="30"
+            name="A Flight"
+            Dlocation="Karachi"
+            Alocation="China"
+            Dtime="12.30"
+            Atime="1.30"
+            price="150"
+
+            val intent = Intent(this, flight_one::class.java)
+            intent.putExtra("flight_ID",id);
+            intent.putExtra("flight_Name",name);
+            intent.putExtra("depart_Location",Dlocation);
+            intent.putExtra("arrive_Location",Alocation);
+            intent.putExtra("depart_Time",Dtime);
+            intent.putExtra("arrive_Time",Atime);
+            intent.putExtra("flight_Price",price);
+            startActivity(intent)
+
+        }else if(position==1){
+
+            id="31"
+            name="B Flight"
+            Dlocation="Karachi"
+            Alocation="America"
+            Dtime="12.00"
+            Atime="13.30"
+            price="900"
+
+            val intent = Intent(this, flight_one::class.java)
+            intent.putExtra("flight_ID",id);
+            intent.putExtra("flight_Name",name);
+            intent.putExtra("depart_Location",Dlocation);
+            intent.putExtra("arrive_Location",Alocation);
+            intent.putExtra("depart_Time",Dtime);
+            intent.putExtra("arrive_Time",Atime);
+            intent.putExtra("flight_Price",price);
+            startActivity(intent)
+
+        }else if(position==2){
+
+            id="32"
+            name="C Flight"
+            Dlocation="Karachi"
+            Alocation="America"
+            Dtime="12.00"
+            Atime="13.30"
+            price="900"
+
+            val intent = Intent(this, flight_one::class.java)
+            intent.putExtra("flight_ID",id);
+            intent.putExtra("flight_Name",name);
+            intent.putExtra("depart_Location",Dlocation);
+            intent.putExtra("arrive_Location",Alocation);
+            intent.putExtra("depart_Time",Dtime);
+            intent.putExtra("arrive_Time",Atime);
+            intent.putExtra("flight_Price",price);
+            startActivity(intent)
+
+        }else if(position==3){
+
+            id="33"
+            name="D Flight"
+            Dlocation="Karachi"
+            Alocation="America"
+            Dtime="12.00"
+            Atime="13.30"
+            price="900"
+
+            val intent = Intent(this, flight_one::class.java)
+            intent.putExtra("flight_ID",id);
+            intent.putExtra("flight_Name",name);
+            intent.putExtra("depart_Location",Dlocation);
+            intent.putExtra("arrive_Location",Alocation);
+            intent.putExtra("depart_Time",Dtime);
+            intent.putExtra("arrive_Time",Atime);
+            intent.putExtra("flight_Price",price);
+            startActivity(intent)
+
+        }else if(position==4){
+
+            id="34"
+            name="E Flight"
+            Dlocation="Karachi"
+            Alocation="America"
+            Dtime="12.00"
+            Atime="13.30"
+            price="900"
+
+            val intent = Intent(this, flight_one::class.java)
+            intent.putExtra("flight_ID",id);
+            intent.putExtra("flight_Name",name);
+            intent.putExtra("depart_Location",Dlocation);
+            intent.putExtra("arrive_Location",Alocation);
+            intent.putExtra("depart_Time",Dtime);
+            intent.putExtra("arrive_Time",Atime);
+            intent.putExtra("flight_Price",price);
+            startActivity(intent)
+
+        }
+
         val clickItem = newArrayList[position]
     }
 }
