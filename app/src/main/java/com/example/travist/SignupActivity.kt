@@ -26,8 +26,7 @@ class SignupActivity : AppCompatActivity() {
     lateinit var register: Button
 
 
-
-//    var url: String = "https://192.168.10.4/travist/"
+    //    var url: String = "https://192.168.10.4/travist/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
@@ -73,9 +72,58 @@ class SignupActivity : AppCompatActivity() {
         register = findViewById(R.id.register)
 
 
+//        register.setOnClickListener {
+//            insert()
+//        }
+
+
+        // Set onClickListener for the register button
         register.setOnClickListener {
-            insert()
+            if (username.text.toString().isEmpty()) {
+                showError(username, "Enter Username")
+            } else if (!isValidUsername(username.text.toString())) {
+                showError(username, "Username must only contain letters and numbers")
+            } else if (email.text.toString().isEmpty()) {
+                showError(email, "Enter Email")
+            } else if (!isValidEmail(email.text.toString())) {
+                showError(email, "Enter a valid Email")
+            } else if (password.text.toString().isEmpty()) {
+                showError(password, "Enter Password")
+            } else if (!isStrongPassword(password.text.toString())) {
+                showError(password, "Password must be strong (e.g., at least 8 characters with a mix of uppercase, lowercase, and numbers)")
+            } else if (other_user_details.text.toString().isEmpty()) {
+                showError(other_user_details, "Enter contact info")
+            } else {
+                // Additional conditions can be added as needed
+                insert()
+            }
         }
+
+    }
+
+    // Function to show error for EditText fields
+    private fun showError(et: EditText, s: String) {
+        et.setError(s)
+        et.requestFocus()
+    }
+
+    // Function to check password strength
+    private fun isStrongPassword(password: String): Boolean {
+        val passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}\$"
+        return password.matches(passwordPattern.toRegex())
+    }
+
+    // Function to check username validity
+    private fun isValidUsername(username: String): Boolean {
+        val usernamePattern = "^[a-zA-Z0-9]*\$"
+        return username.matches(usernamePattern.toRegex())
+    }
+
+
+    // Function to validate email format
+    private fun isValidEmail(email: String): Boolean {
+        val emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+        return email.matches(emailPattern.toRegex())
     }
 
     fun insert() {

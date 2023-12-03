@@ -67,7 +67,19 @@
                 </LinearLayout>
 
                 <!--                layout for text view-->
-                <LinearLayout
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/uid"
+                        android:fontFamily="@font/frb"
+                        android:text="Explore"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"></TextView>
+
+                    <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
@@ -102,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
 
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="horizontal">
 
                 <!--                    horizontal-->

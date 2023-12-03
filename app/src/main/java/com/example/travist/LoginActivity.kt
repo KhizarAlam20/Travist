@@ -27,9 +27,9 @@ class LoginActivity : AppCompatActivity() {
     lateinit var btn_login: Button
     lateinit var uid: EditText
     lateinit var password: EditText
-    lateinit var signup_btn : TextView
+    lateinit var signup_btn: TextView
 
-//    var url: String = "https://192.168.10.4/travist/"
+    //    var url: String = "https://192.168.10.4/travist/"
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,18 +74,15 @@ class LoginActivity : AppCompatActivity() {
 
         btn_login.setOnClickListener {
 
-           /*** println(Name + "t" + Password)
-
-            if(Name.equals("khizar") && Password.equals("alam")) {
-                Toast.makeText(this,"Hi from login",Toast.LENGTH_SHORT).show()
-                var intent = Intent(this, SignupActivity::class.java)
-                startActivity(intent)
-            }else{
-                    var intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-            }*/
-
-            login()
+//            if (uid.text.toString().isEmpty()) {
+//                showError(uid, "Enter User ID")
+//            }else if(password.text.toString().isEmpty()){
+//                showError(password, "Enter Password")
+//            }
+//
+//            else {
+                login()
+//            }
         }
 
         signup_btn.setOnClickListener {
@@ -94,6 +91,13 @@ class LoginActivity : AppCompatActivity() {
             Animatoo.animateSlideLeft(this)
         }
 
+
+    }
+
+    private fun showError(uid: EditText, s: String) {
+
+        uid.setError(s)
+        uid.requestFocus()
 
     }
 
@@ -132,8 +136,12 @@ class LoginActivity : AppCompatActivity() {
                             val email = obj.getString("email")
                             val other_user_details = obj.getString("other_user_details")
 
-                            if(user_id.equals(uid) && Password.equals(password)){
-                                Toast.makeText(this@LoginActivity,"Hello logged in", Toast.LENGTH_SHORT).show()
+                            if (user_id.equals(uid) && Password.equals(password)) {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Hello logged in",
+                                    Toast.LENGTH_SHORT
+                                ).show()
                                 val intent = Intent(this, MainActivity::class.java)
                                 intent.putExtra("USER_ID", user_id)
                                 intent.putExtra("USER_NAME", username)// Add the user_id as an extra

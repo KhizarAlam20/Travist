@@ -62,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futur"
-            android:text="Hotel Name:"
+            android:text="Booking Date:"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_marginTop="20dp"></TextView>
@@ -91,56 +91,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:fontFamily="@font/futur"
-            android:text="Location"
+            android:text="user id:"
             android:textColor="@color/black"
             android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
+            android:layout_marginTop="5dp"></TextView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
-            android:text="Location"
-            android:id="@+id/hotel_Location"
+            android:text="00"
+            android:id="@+id/user_id_val"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
+            android:textSize="25dp"
+            android:layout_marginTop="5dp"></TextView>
 
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:fontFamily="@font/futur"
-            android:text="Ratings"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="4 Star"
-            android:id="@+id/hotel_Rating"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-
-    </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="wrap_content"

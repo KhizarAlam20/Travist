@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
 
             android:fontFamily="@font/futur"
-            android:text="Airline Name:"
+            android:text="Booking date:"
             android:textColor="@color/black"
             android:textSize="20dp"
             android:layout_marginTop="20dp"></TextView>
@@ -69,7 +69,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/futura_heavy"
             android:text="Airline"
-            android:id="@+id/flight_name"
+            android:id="@+id/booking_date"
             android:layout_marginLeft="15dp"
             android:textColor="@color/black"
             android:textSize="20dp"
@@ -81,122 +81,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futur"
-            android:text="Depart Loc."
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="Location"
-            android:id="@+id/flight_departLoc"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futur"
-            android:text="Arrive Loc."
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="Location"
-            android:id="@+id/flight_arriveLoc"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futur"
-            android:text="Depart Time:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="Location"
-            android:id="@+id/flight_departTime"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futur"
-            android:text="Arrive Time:"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/futura_heavy"
-            android:text="Location"
-            android:id="@+id/flight_arriveTime"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="20dp"></TextView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
         >
 
@@ -222,6 +107,36 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="@font/futur"
+            android:text="user id:"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura_heavy"
+            android:text="00"
+            android:id="@+id/user_id_val"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:layout_marginTop="5dp"></TextView>
+
+    </LinearLayout>
+
     <Button
         android:layout_width="280dp"
         android:layout_height="50dp"
@@ -229,11 +144,11 @@
         android:id="@+id/save"
         android:layout_gravity="center"
         android:backgroundTint="@color/teal"
-        android:text="Save"
+        android:text="Book"
         android:textColor="@color/black"
         android:textSize="17dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="30dp"></Button>
+        android:layout_marginTop="35dp"></Button>
     <Button
         android:layout_width="280dp"
         android:layout_height="50dp"

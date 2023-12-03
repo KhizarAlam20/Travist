@@ -3,11 +3,13 @@ package com.example.travist.hotel
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.travist.HotelOne
 import com.example.travist.R
+import com.example.travist.flight_one
 
 class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
     lateinit var rcv : RecyclerView
@@ -16,11 +18,17 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
     lateinit var hotel_image :Array<Int>
     lateinit var hotel_price :Array<String>
     lateinit var hotel_description :Array<String>
-
+    lateinit var uid: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hotel)
+
+
+        // Retrieve user_id from the intent
+        val idu = intent.getStringExtra("USER_TABLE_ID")
+
+
 
         hotel_image = arrayOf(
             R.drawable.h1,
@@ -55,7 +63,10 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
         )
 
         rcv = findViewById(R.id.rcv)
+        uid= findViewById(R.id.uid)
 
+
+        uid.text=idu
 
     //
 //        listCategories= ArrayList<hotelDetailClass>()
@@ -71,6 +82,9 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
 
     }
 
+
+
+
     private fun getUserData() {
         for (i in hotel_image.indices){
             val news = hotelDetailClass(hotel_name[i],hotel_description[i],hotel_price[i],hotel_image[i])
@@ -84,85 +98,72 @@ class HotelActivity : AppCompatActivity(), rcvAdapter.OnItemClickListner {
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position",Toast.LENGTH_SHORT).show()
 
-        var id:String=""
-        var name:String=""
-        var location:String=""
-        var rating:String=""
-        var price:String=""
+        var hid: String = ""
+        var bookingDate: String = ""
+        var price: String = ""
+        var user_table_id= uid.text.toString()
+
         if(position==0){
 
-            id="20"
-            name="A hotel"
-            location="Karachi"
-            rating="5"
-            price="200"
+            hid = "20"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, HotelOne::class.java)
-            intent.putExtra("hotel_id",id);
-            intent.putExtra("hotel_name",name);
-            intent.putExtra("hotel_location",location);
-            intent.putExtra("hotel_rating",rating);
-            intent.putExtra("hotel_price",price);
+            intent.putExtra("hotel_id", hid);
+            intent.putExtra("booking_date", bookingDate);
+            intent.putExtra("hotel_price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }else if(position==1){
-            id="21"
-            name="B Hotel"
-            location="Islamabad"
-            rating="4"
-            price="900"
+            hid = "21"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, HotelOne::class.java)
-            intent.putExtra("hotel_id",id);
-            intent.putExtra("hotel_name",name);
-            intent.putExtra("hotel_location",location);
-            intent.putExtra("hotel_rating",rating);
-            intent.putExtra("hotel_price",price);
+            intent.putExtra("hotel_id", hid);
+            intent.putExtra("booking_date", bookingDate);
+            intent.putExtra("hotel_price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }else if(position==2){
-            id="22"
-            name="C hotel"
-            location="Karachi"
-            rating="4"
-            price="260"
+            hid = "22"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, HotelOne::class.java)
-            intent.putExtra("hotel_id",id);
-            intent.putExtra("hotel_name",name);
-            intent.putExtra("hotel_location",location);
-            intent.putExtra("hotel_rating",rating);
-            intent.putExtra("hotel_price",price);
+            intent.putExtra("hotel_id", hid);
+            intent.putExtra("booking_date", bookingDate);
+            intent.putExtra("hotel_price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }else if(position==3){
-            id="23"
-            name="D hotel"
-            location="Lahore"
-            rating="5"
-            price="350"
+            hid = "23"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, HotelOne::class.java)
-            intent.putExtra("hotel_id",id);
-            intent.putExtra("hotel_name",name);
-            intent.putExtra("hotel_location",location);
-            intent.putExtra("hotel_rating",rating);
-            intent.putExtra("hotel_price",price);
+            intent.putExtra("hotel_id", hid);
+            intent.putExtra("booking_date", bookingDate);
+            intent.putExtra("hotel_price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
+
         }else{
-            id="24"
-            name="E hotel"
-            location="Karachi"
-            rating="5"
-            price="880"
+            hid = "24"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, HotelOne::class.java)
-            intent.putExtra("hotel_id",id);
-            intent.putExtra("hotel_name",name);
-            intent.putExtra("hotel_location",location);
-            intent.putExtra("hotel_rating",rating);
-            intent.putExtra("hotel_price",price);
+            intent.putExtra("hotel_id", hid);
+            intent.putExtra("booking_date", bookingDate);
+            intent.putExtra("hotel_price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
+
         }
 
 

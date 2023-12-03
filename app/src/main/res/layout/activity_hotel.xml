@@ -34,6 +34,18 @@
       android:textColor="#FEFEFE"
       android:gravity="center">
    </TextView>
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="00"
+             android:layout_marginTop="05dp"
+             android:id="@+id/uid"
+             android:textSize="20dp"
+             android:fontFamily="@font/futura_heavy"
+             android:textColor="#FEFEFE"
+             android:gravity="center">
+         </TextView>
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_marginTop="50dp"

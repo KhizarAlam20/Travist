@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class ResturantActivity : AppCompatActivity(), RcvResturantAdapter.OnItemClickListner {
     lateinit var rcvRes: RecyclerView
+    lateinit var uid: TextView
+
     lateinit var res_name: Array<String>
     lateinit var newArrayList: ArrayList<ResturantDetailClass>
     lateinit var res_image: Array<Int>
@@ -21,6 +24,10 @@ class ResturantActivity : AppCompatActivity(), RcvResturantAdapter.OnItemClickLi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resturant)
+
+        // Retrieve user_id from the intent
+        val idu = intent.getStringExtra("USER_TABLE_ID")
+
 
         res_image = arrayOf(
             R.drawable.h1,
@@ -55,6 +62,11 @@ class ResturantActivity : AppCompatActivity(), RcvResturantAdapter.OnItemClickLi
         )
 
         rcvRes = findViewById(R.id.rcvRes)
+        uid= findViewById(R.id.uid)
+
+
+        uid.text=idu
+
 
         rcvRes.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         newArrayList = arrayListOf<ResturantDetailClass>()
@@ -80,93 +92,84 @@ class ResturantActivity : AppCompatActivity(), RcvResturantAdapter.OnItemClickLi
 //    var adapter = hotelDetailClass(newArrayList)
     }
 
+
+
+
     override fun onItemClick(position: Int) {
         Toast.makeText(this,"hello $position", Toast.LENGTH_SHORT).show()
-        var id:String=""
-        var name:String=""
-        var location:String=""
-        var cuisine:String=""
-        var price:String=""
+//        var id:String=""
+//        var name:String=""
+//        var location:String=""
+//        var cuisine:String=""
+//        var price:String=""
+
+        var rid: String = ""
+        var bookingDate: String = ""
+        var price: String = ""
+
+        var user_table_id= uid.text.toString()
+
         if(position==0){
 
-            id="40"
-            name="A RESTAURANT"
-            location="Karachi"
-            cuisine="desert"
-            price="150"
+            rid = "40"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, ResturantOne::class.java)
-            intent.putExtra("RES_ID",id);
-            intent.putExtra("RES_NAME",name);
-            intent.putExtra("RES_LOC",location);
-            intent.putExtra("CUISINE_TYPE",cuisine);
-            intent.putExtra("RES_PRICE",price);
+            intent.putExtra("RES_ID", rid);
+            intent.putExtra("BOOKING_DATE", bookingDate);
+            intent.putExtra("RES_PRICE", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }else if(position==1){
-            id="41"
-            name="B RESTAURANT"
-            location="Karachi"
-            cuisine="Delights"
-            price="900"
-
+            rid = "41"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, ResturantOne::class.java)
-            intent.putExtra("RES_ID",id);
-            intent.putExtra("RES_NAME",name);
-            intent.putExtra("RES_LOC",location);
-            intent.putExtra("CUISINE_TYPE",cuisine);
-            intent.putExtra("RES_PRICE",price);
+            intent.putExtra("RES_ID", rid);
+            intent.putExtra("BOOKING_DATE", bookingDate);
+            intent.putExtra("RES_PRICE", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }else if(position==2){
-            id="42"
-            name="C RESTAURANT"
-            location="Karachi"
-            cuisine="Delights"
-            price="260"
-
+            rid = "42"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, ResturantOne::class.java)
-            intent.putExtra("RES_ID",id);
-            intent.putExtra("RES_NAME",name);
-            intent.putExtra("RES_LOC",location);
-            intent.putExtra("CUISINE_TYPE",cuisine);
-            intent.putExtra("RES_PRICE",price);
+            intent.putExtra("RES_ID", rid);
+            intent.putExtra("BOOKING_DATE", bookingDate);
+            intent.putExtra("RES_PRICE", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }
         else if(position==3){
-            id="43"
-            name="D RESTAURANT"
-            location="Karachi"
-            cuisine="JAMMINGS"
-            price="350"
-
+            rid = "43"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, ResturantOne::class.java)
-            intent.putExtra("RES_ID",id);
-            intent.putExtra("RES_NAME",name);
-            intent.putExtra("RES_LOC",location);
-            intent.putExtra("CUISINE_TYPE",cuisine);
-            intent.putExtra("RES_PRICE",price);
+            intent.putExtra("RES_ID", rid);
+            intent.putExtra("BOOKING_DATE", bookingDate);
+            intent.putExtra("RES_PRICE", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }
         else if(position==4){
-            id="44"
-            name="E RESTAURANT"
-            location="ISLAMABAD"
-            cuisine="CUISINES"
-            price="880"
-
+            rid = "44"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, ResturantOne::class.java)
-            intent.putExtra("RES_ID",id);
-            intent.putExtra("RES_NAME",name);
-            intent.putExtra("RES_LOC",location);
-            intent.putExtra("CUISINE_TYPE",cuisine);
-            intent.putExtra("RES_PRICE",price);
+            intent.putExtra("RES_ID", rid);
+            intent.putExtra("BOOKING_DATE", bookingDate);
+            intent.putExtra("RES_PRICE", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
         }

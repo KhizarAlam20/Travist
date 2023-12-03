@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,8 @@ import com.example.travist.hotel.rcvAdapter
 
 class FilghtActivity : AppCompatActivity(), RcvFlightAdapter.OnItemClickListner {
     lateinit var rcvFlight: RecyclerView
+    lateinit var uid: TextView
+
     lateinit var flight_name: Array<String>
     lateinit var newArrayList: ArrayList<FlightDetailClass>
     lateinit var flight_image: Array<Int>
@@ -23,6 +26,10 @@ class FilghtActivity : AppCompatActivity(), RcvFlightAdapter.OnItemClickListner 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filght)
+
+
+        // Retrieve user_id from the intent
+        val idu = intent.getStringExtra("USER_TABLE_ID")
 
         flight_image = arrayOf(
             R.drawable.h1,
@@ -57,6 +64,11 @@ class FilghtActivity : AppCompatActivity(), RcvFlightAdapter.OnItemClickListner 
         )
 
         rcvFlight = findViewById(R.id.rcvFlight)
+        uid= findViewById(R.id.uid)
+
+
+        uid.text=idu
+
 
         rcvFlight.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         newArrayList = arrayListOf<FlightDetailClass>()
@@ -83,115 +95,77 @@ class FilghtActivity : AppCompatActivity(), RcvFlightAdapter.OnItemClickListner 
     }
 
     override fun onItemClick(position: Int) {
-        Toast.makeText(this,"hello $position", Toast.LENGTH_SHORT).show()
-        var id:String=""
-        var name:String=""
-        var Dlocation:String=""
-        var Alocation:String=""
-        var Dtime:String=""
-        var Atime:String=""
-        var price:String=""
+        Toast.makeText(this, "hello $position", Toast.LENGTH_SHORT).show()
+        var fid: String = ""
+        var bookingDate: String = ""
+        var price: String = ""
+        var user_table_id= uid.text.toString()
 
-        if(position==0){
 
-            id="30"
-            name="A Flight"
-            Dlocation="Karachi"
-            Alocation="China"
-            Dtime="12.30"
-            Atime="1.30"
-            price="150"
+        if (position == 0) {
+
+            fid = "30"
+            bookingDate = "07 dec,2023"
+            price = "400"
 
             val intent = Intent(this, flight_one::class.java)
-            intent.putExtra("flight_ID",id);
-            intent.putExtra("flight_Name",name);
-            intent.putExtra("depart_Location",Dlocation);
-            intent.putExtra("arrive_Location",Alocation);
-            intent.putExtra("depart_Time",Dtime);
-            intent.putExtra("arrive_Time",Atime);
-            intent.putExtra("flight_Price",price);
+            intent.putExtra("flight_ID", fid);
+            intent.putExtra("bookingDate", bookingDate);
+            intent.putExtra("flight_Price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
-        }else if(position==1){
+        } else if (position == 1) {
 
-            id="31"
-            name="B Flight"
-            Dlocation="Karachi"
-            Alocation="America"
-            Dtime="12.00"
-            Atime="13.30"
-            price="900"
+            fid = "31"
+            bookingDate = "06 dec,2023"
+            price = "250"
 
             val intent = Intent(this, flight_one::class.java)
-            intent.putExtra("flight_ID",id);
-            intent.putExtra("flight_Name",name);
-            intent.putExtra("depart_Location",Dlocation);
-            intent.putExtra("arrive_Location",Alocation);
-            intent.putExtra("depart_Time",Dtime);
-            intent.putExtra("arrive_Time",Atime);
-            intent.putExtra("flight_Price",price);
+            intent.putExtra("flight_ID", fid);
+            intent.putExtra("bookingDate", bookingDate);
+            intent.putExtra("flight_Price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
-        }else if(position==2){
+        } else if (position == 2) {
 
-            id="32"
-            name="C Flight"
-            Dlocation="Karachi"
-            Alocation="America"
-            Dtime="12.00"
-            Atime="13.30"
-            price="900"
+            fid = "32"
+            bookingDate = "12 dec,2023"
+            price = "100"
 
             val intent = Intent(this, flight_one::class.java)
-            intent.putExtra("flight_ID",id);
-            intent.putExtra("flight_Name",name);
-            intent.putExtra("depart_Location",Dlocation);
-            intent.putExtra("arrive_Location",Alocation);
-            intent.putExtra("depart_Time",Dtime);
-            intent.putExtra("arrive_Time",Atime);
-            intent.putExtra("flight_Price",price);
+            intent.putExtra("flight_ID", fid);
+            intent.putExtra("bookingDate", bookingDate);
+            intent.putExtra("flight_Price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
-        }else if(position==3){
+        } else if (position == 3) {
 
-            id="33"
-            name="D Flight"
-            Dlocation="Karachi"
-            Alocation="America"
-            Dtime="12.00"
-            Atime="13.30"
-            price="900"
+            fid = "33"
+            bookingDate = "01 dec,2023"
+            price = "219"
 
             val intent = Intent(this, flight_one::class.java)
-            intent.putExtra("flight_ID",id);
-            intent.putExtra("flight_Name",name);
-            intent.putExtra("depart_Location",Dlocation);
-            intent.putExtra("arrive_Location",Alocation);
-            intent.putExtra("depart_Time",Dtime);
-            intent.putExtra("arrive_Time",Atime);
-            intent.putExtra("flight_Price",price);
+            intent.putExtra("flight_ID", fid);
+            intent.putExtra("bookingDate", bookingDate);
+            intent.putExtra("flight_Price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
 
-        }else if(position==4){
+        } else if (position == 4) {
 
-            id="34"
-            name="E Flight"
-            Dlocation="Karachi"
-            Alocation="America"
-            Dtime="12.00"
-            Atime="13.30"
-            price="900"
+            fid = "33"
+            bookingDate = "4 dec,2023"
+            price = "209"
 
             val intent = Intent(this, flight_one::class.java)
-            intent.putExtra("flight_ID",id);
-            intent.putExtra("flight_Name",name);
-            intent.putExtra("depart_Location",Dlocation);
-            intent.putExtra("arrive_Location",Alocation);
-            intent.putExtra("depart_Time",Dtime);
-            intent.putExtra("arrive_Time",Atime);
-            intent.putExtra("flight_Price",price);
+            intent.putExtra("flight_ID", fid);
+            intent.putExtra("bookingDate", bookingDate);
+            intent.putExtra("flight_Price", price);
+            intent.putExtra("userid",user_table_id);
             startActivity(intent)
-
         }
 
         val clickItem = newArrayList[position]

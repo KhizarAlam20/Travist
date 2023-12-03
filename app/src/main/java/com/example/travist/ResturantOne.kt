@@ -14,9 +14,11 @@ import com.android.volley.toolbox.Volley
 
 class ResturantOne : AppCompatActivity() {
     lateinit var resturant_id: TextView
+    lateinit var user_id_val: TextView
+
     lateinit var resturant_name: TextView
-    lateinit var resturant_location: TextView
-    lateinit var cuisine_type: TextView
+//    lateinit var resturant_location: TextView
+//    lateinit var cuisine_type: TextView
     lateinit var resturant_price: TextView
     lateinit var no_of_person: TextView
     lateinit var decrease: Button
@@ -31,10 +33,11 @@ class ResturantOne : AppCompatActivity() {
         setContentView(R.layout.activity_resturant_one)
 
         resturant_id = findViewById(R.id.resturant_id)
+        user_id_val = findViewById(R.id.user_id_val)
         resturant_name = findViewById(R.id.resturant_name)
 
-        resturant_location = findViewById(R.id.resturant_location)
-        cuisine_type = findViewById(R.id.cuisine_type)
+//        resturant_location = findViewById(R.id.resturant_location)
+//        cuisine_type = findViewById(R.id.cuisine_type)
         resturant_price = findViewById(R.id.resturant_price)
 
         increase = findViewById(R.id.increase)
@@ -46,23 +49,27 @@ class ResturantOne : AppCompatActivity() {
 
         // Retrieve user_id from the intent
         val id = intent.getStringExtra("RES_ID")
-        val name = intent.getStringExtra("RES_NAME")
-        val location = intent.getStringExtra("RES_LOC")
-        val cuisine = intent.getStringExtra("CUISINE_TYPE")
+        val name = intent.getStringExtra("BOOKING_DATE")
         val price = intent.getStringExtra("RES_PRICE")
+        val uid = intent.getStringExtra("userid")
+
+
+//        val location = intent.getStringExtra("RES_LOC")
+//        val cuisine = intent.getStringExtra("CUISINE_TYPE")
 
         // Now you can use the user_id as needed
         // For example, you can print it to the log
-        Log.d("MainActivity", "hotel ID: $id")
+        Log.d("MainActivity", "hotel ID: $uid")
 
         var count: Int = 1
         var initialPrice: Int = Integer.parseInt(price)
 
         resturant_id.text = id
         resturant_name.text = name
-        resturant_location.text = location
-        cuisine_type.text = cuisine
+//        resturant_location.text = location
+//        cuisine_type.text = cuisine
         resturant_price.text = price
+        user_id_val.text=uid
 
         increase.setOnClickListener {
             var value: Int = Integer.parseInt(no_of_person.text.toString())
@@ -117,15 +124,11 @@ class ResturantOne : AppCompatActivity() {
     fun insert() {
         val idValue: String = resturant_id.text.toString().trim()
         val nameValue: String = resturant_name.text.toString().trim()
-        val locationValue: String = resturant_location.text.toString().trim()
-        val cuisineValue: String = cuisine_type.text.toString().trim()
         val otherRestaurantDetailsValue: String = resturant_price.text.toString().trim()
-        var URL: String = Conn.url + "restuarants.php"
+        val userIdValue: String = user_id_val.text.toString().trim()
 
-//        if (passwordValue.isEmpty()) {
-//            Toast.makeText(this, "Enter password", Toast.LENGTH_SHORT).show()
-//            return
-//        }
+        var URL: String = Conn.url + "resturantBooking.php"
+
 
         println("Hello After")
 
@@ -145,11 +148,10 @@ class ResturantOne : AppCompatActivity() {
         ) {
             override fun getParams(): Map<String, String> {
                 val params = HashMap<String, String>()
+                params["user_id"] = userIdValue
                 params["restaurant_id"] = idValue
-                params["name"] = nameValue
-                params["location"] = locationValue
-                params["cuisine_type"] = cuisineValue
-                params["other_restaurant_details"] = otherRestaurantDetailsValue
+                params["booking_date"] = nameValue
+                params["other_booking_details"] = otherRestaurantDetailsValue
                 return params
             }
         }
