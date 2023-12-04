@@ -116,7 +116,7 @@ class HotelOne : AppCompatActivity() {
         val otherHotelDetailsValue: String = hotel_Price.text.toString().trim()
         val userIdValue: String = user_id_val.text.toString().trim()
 
-        var URL: String = "https://192.168.10.5/travist/hotelBooking.php"
+        var URL: String =Conn.url+"hotelBooking.php"
 
 
         println("Hello After")

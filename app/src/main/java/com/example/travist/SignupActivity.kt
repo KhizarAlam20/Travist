@@ -131,7 +131,9 @@ class SignupActivity : AppCompatActivity() {
         val emailValue: String = email.text.toString().trim()
         val passwordValue: String = password.text.toString().trim()
         val otherUserDetailsValue: String = other_user_details.text.toString().trim()
-        var URL: String = Conn.url + "conn.php"
+
+//        var URL: String = Conn.url + "conn.php"
+        var URL: String = "https://192.168.10.5/travist/conn.php"
 
         if (passwordValue.isEmpty()) {
             Toast.makeText(this, "Enter password", Toast.LENGTH_SHORT).show()

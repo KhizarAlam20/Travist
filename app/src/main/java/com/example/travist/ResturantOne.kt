@@ -127,7 +127,7 @@ class ResturantOne : AppCompatActivity() {
         val otherRestaurantDetailsValue: String = resturant_price.text.toString().trim()
         val userIdValue: String = user_id_val.text.toString().trim()
 
-        var URL: String = Conn.url + "resturantBooking.php"
+        var URL: String = Conn.url+"resturantBooking.php"
 
 
         println("Hello After")

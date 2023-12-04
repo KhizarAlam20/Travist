@@ -64,7 +64,7 @@ class flight_one : AppCompatActivity() {
         val otherFlightDetailsValue: String = flight_price.text.toString().trim()
         val userIdValue: String = user_id_val.text.toString().trim()
 
-        var URL: String = Conn.url + "flightBooking.php"
+        var URL: String = Conn.url+"flightBooking.php"
 
 
         println("Hello After")

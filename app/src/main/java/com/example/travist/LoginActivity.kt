@@ -108,7 +108,8 @@ class LoginActivity : AppCompatActivity() {
         val password: String = password.text.toString()
 
 
-        var URLL: String = Conn.url + "display.php"
+//        var URLL: String = Conn.url + "display.php"
+        var URLL: String ="https://192.168.10.5/travist/display.php"
 
         val request = StringRequest(Request.Method.POST, URLL,
             Response.Listener<String> { response ->
