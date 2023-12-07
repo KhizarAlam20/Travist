@@ -9,6 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="teal">#33DFA1</color>
     <color name="home">#5B37B7</color>
+    <color name="background">#2F4858</color>
+
     <color name="like">#C9379D</color>
     <color name="search">#E6A919</color>
     <color name="profile">#1194AA</color>

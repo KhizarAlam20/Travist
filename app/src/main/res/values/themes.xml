@@ -24,6 +24,14 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="NoActionBarFour" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">@color/background</item>
+        <item name="colorAccent">@color/background</item>
+        <!-- Customize your theme here. -->
+    </style>
+
     <style name="NoActionBarThree" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#050505</item>

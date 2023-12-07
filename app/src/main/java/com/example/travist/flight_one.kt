@@ -18,6 +18,7 @@ class flight_one : AppCompatActivity() {
     lateinit var user_id_val: TextView
     lateinit var flight_price: TextView
     lateinit var save: Button
+    var bill :Int =0
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +68,8 @@ class flight_one : AppCompatActivity() {
         var URL: String = Conn.url+"flightBooking.php"
 
 
+        bill = Integer.parseInt(otherFlightDetailsValue)
+
         println("Hello After")
 
         val stringRequest = object : StringRequest(
@@ -74,6 +77,8 @@ class flight_one : AppCompatActivity() {
             Response.Listener { response ->
                 if (response.equals("inserted", ignoreCase = true)) {
                     Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show()
+                    Pay.flightBill=bill
+
                 } else {
                     Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
                 }

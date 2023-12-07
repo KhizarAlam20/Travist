@@ -26,6 +26,7 @@ class ResturantOne : AppCompatActivity() {
     lateinit var save: Button
     lateinit var back: Button
     var saveCount: Int = 0
+    var bill :Int =0
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,6 +83,8 @@ class ResturantOne : AppCompatActivity() {
             var priceToShow: String = Integer.toString(updatePriceValue)
 
             no_of_person.text = Integer.toString(updateValue)
+            bill=updatePriceValue
+
             resturant_price.text = priceToShow
         }
 
@@ -99,6 +102,7 @@ class ResturantOne : AppCompatActivity() {
                 // Ensure that the updated price is at least the initial price
                 if (updatePriceValue >= initialPrice) {
                     resturant_price.text = Integer.toString(updatePriceValue)
+                    bill=updatePriceValue
                 } else {
                     resturant_price.text = Integer.toString(initialPrice)
                 }
@@ -137,6 +141,7 @@ class ResturantOne : AppCompatActivity() {
             Response.Listener { response ->
                 if (response.equals("inserted", ignoreCase = true)) {
                     Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show()
+                    Pay.resBill=bill
                 } else {
                     Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
                 }

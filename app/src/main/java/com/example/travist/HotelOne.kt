@@ -22,6 +22,7 @@ class HotelOne : AppCompatActivity() {
     lateinit var Decrease:Button
     lateinit var Increase: Button
     lateinit var save: Button
+    var bill :Int =0
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,6 +79,8 @@ class HotelOne : AppCompatActivity() {
             var priceToShow:String = Integer.toString(updatePriceValue)
 
             no_of_person.text=Integer.toString(updateValue)
+            bill=updatePriceValue
+
             hotel_Price.text=priceToShow
         }
 
@@ -94,6 +97,7 @@ class HotelOne : AppCompatActivity() {
 
                 // Ensure that the updated price is at least the initial price
                 if (updatePriceValue >= initialPrice) {
+                    bill=updatePriceValue
                     hotel_Price.text = Integer.toString(updatePriceValue)
                 } else {
                     hotel_Price.text = Integer.toString(initialPrice)
@@ -126,6 +130,9 @@ class HotelOne : AppCompatActivity() {
             Response.Listener { response ->
                 if (response.equals("inserted", ignoreCase = true)) {
                     Toast.makeText(this, "Data Inserted", Toast.LENGTH_SHORT).show()
+                    Pay.hotelBill=bill
+
+
                 } else {
                     Toast.makeText(this, response, Toast.LENGTH_SHORT).show()
                 }

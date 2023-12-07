@@ -17,13 +17,37 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Payment"
+            android:exported="false"
+            android:theme="@style/NoActionBarTwo" />
+        <activity
+            android:name=".updateRes"
+            android:exported="false"
+            android:theme="@style/NoActionBarFour"/>
+        <activity
+            android:name=".UpdateHotel"
+            android:exported="false"
+            android:theme="@style/NoActionBarFour"/>
+        <activity
+            android:name=".UpdateFlight"
+            android:exported="false"
+            android:theme="@style/NoActionBarFour" />
+        <activity
+            android:name=".AdminPanel"
+            android:exported="false"
+            android:theme="@style/NoActionBarFour" />
+        <activity
+            android:name=".admin"
+            android:exported="false"
+            android:theme="@style/NoActionBarFour" />
+        <activity
             android:name=".ResturantOne"
             android:exported="false"
-            android:theme="@style/NoActionBarTwo"/>
+            android:theme="@style/NoActionBarTwo" />
         <activity
             android:name=".flight_one"
             android:exported="false"
-            android:theme="@style/NoActionBarTwo"/>
+            android:theme="@style/NoActionBarTwo" />
         <activity
             android:name=".HotelOne"
             android:exported="false"

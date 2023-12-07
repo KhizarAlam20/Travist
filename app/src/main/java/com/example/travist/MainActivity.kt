@@ -5,6 +5,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var reservation_btn: CardView
     lateinit var userName: TextView
     lateinit var uid: TextView
+    lateinit var pay: ImageView
+
     var doubleBackPress : Boolean = false
 
     @SuppressLint("MissingInflatedId")
@@ -44,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         hotel_btn = findViewById(R.id.hotel_btn)
         flight_btn = findViewById(R.id.flight_btn)
         userName = findViewById(R.id.userName)
+        pay = findViewById(R.id.pay)
         uid = findViewById(R.id.uid)
         resturant_btn = findViewById(R.id.resturant_btn)
         reservation_btn = findViewById(R.id.reservation_btn)
@@ -77,6 +81,17 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this,"Flight",Toast.LENGTH_SHORT).show()
             val intent = Intent(this, FilghtActivity::class.java)
+            intent.putExtra("USER_TABLE_ID", idu)
+            startActivity(intent)
+            Animatoo.animateSlideLeft(this)
+        }
+
+        pay.setOnClickListener {
+
+            var idu = uid.text.toString()
+
+            Toast.makeText(this,"Payment",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Payment::class.java)
             intent.putExtra("USER_TABLE_ID", idu)
             startActivity(intent)
             Animatoo.animateSlideLeft(this)
